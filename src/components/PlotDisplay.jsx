@@ -15,7 +15,7 @@ const PlotDisplay = ({ data }) => {
             y: Array.from({ length: 100 }, (_, i) => Math.sin(value * (i / 10))),
             type: "scatter",
             mode: "lines",
-            name: `Aberration ${index + 1}`, // Generic labels for the legend
+            name: `Aberration ${index + 1}`, 
           }))}
         layout={{
           title: "",
@@ -32,8 +32,8 @@ const PlotDisplay = ({ data }) => {
           legend: {
             font: { color: "#d8dee9" },
           },
-          paper_bgcolor: "rgba(0,0,0,0)", // Transparent background
-          plot_bgcolor: "rgba(0,0,0,0)", // Transparent background
+          paper_bgcolor: "rgba(0,0,0,0)", 
+          plot_bgcolor: "rgba(0,0,0,0)",
           height: 400,
         }}
         className="rounded-md"
