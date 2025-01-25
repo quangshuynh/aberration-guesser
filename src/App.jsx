@@ -3,7 +3,7 @@ import PlotDisplay from "./components/PlotDisplay";
 import GuessControls from "./components/GuessControls";
 import Results from "./components/Results";
 import Header from "./components/Header";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 import { generatePlotData } from "./utils/aberrationCalculations";
 
 const App = () => {
@@ -16,10 +16,10 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-gray-50 text-gray-900 flex flex-col">
+    <div id="root">
       <Header />
-      <main className="flex-1 flex flex-col items-center justify-center px-6 py-6">
-        <div className="w-full max-w-screen-lg bg-white shadow-lg rounded-lg p-6 space-y-6">
+      <main>
+        <div className="card">
           <PlotDisplay data={plotData} />
           {!results ? (
             <GuessControls
@@ -31,7 +31,7 @@ const App = () => {
           )}
         </div>
       </main>
-        <Footer />
+      <Footer />
     </div>
   );
 };
