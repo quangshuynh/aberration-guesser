@@ -16,10 +16,10 @@ const App = () => {
   };
 
   return (
-    <div id="root">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-800 to-gray-900 text-gray-100">
       <Header />
-      <main>
-        <div className="card">
+      <main className="flex-1 flex flex-col items-center justify-center px-4 py-6">
+        <div className="w-full max-w-3xl bg-gray-700 rounded-lg p-4 md:p-6 shadow-lg">
           <PlotDisplay data={plotData} />
           {!results ? (
             <GuessControls
