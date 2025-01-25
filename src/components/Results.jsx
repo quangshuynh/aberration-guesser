@@ -8,7 +8,7 @@ const Results = ({ results, onNewInstance }) => {
         <p className="text-green-600 font-bold">Congratulations! You guessed correctly!</p>
       ) : (
         <>
-          <p className="text-red-600 font-bold">Incorrect Guess.</p>
+          <p className="text-red-600 font-bold">Incorrect Guess!</p>
           <p>
             <strong>Correct Aberrations:</strong>{" "}
             {results.correctAberrations.join(", ")}
@@ -20,7 +20,7 @@ const Results = ({ results, onNewInstance }) => {
       )}
       <button
         onClick={onNewInstance}
-        className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg shadow hover:bg-blue-600 transition"
+         className="mt-4 w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 rounded-lg shadow-lg hover:shadow-xl hover:from-blue-600 hover:to-blue-800 transition-transform transform hover:scale-105"
       >
         Try Again
       </button>

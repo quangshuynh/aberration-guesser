@@ -51,7 +51,7 @@ const GuessControls = ({ correctData, setResults }) => {
       </div>
       <button
         onClick={handleSubmit}
-        className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg shadow hover:bg-blue-600 transition"
+         className="mt-4 w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 rounded-lg shadow-lg hover:shadow-xl hover:from-blue-600 hover:to-blue-800 transition-transform transform hover:scale-105"
       >
         Submit
       </button>
