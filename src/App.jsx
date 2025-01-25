@@ -3,6 +3,7 @@ import PlotDisplay from "./components/PlotDisplay";
 import GuessControls from "./components/GuessControls";
 import Results from "./components/Results";
 import Header from "./components/Header";
+import Footer from "./components/Footer"
 import { generatePlotData } from "./utils/aberrationCalculations";
 
 const App = () => {
@@ -15,10 +16,10 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
+    <div className="min-h-screen w-full bg-gray-50 text-gray-900 flex flex-col">
       <Header />
-      <main className="flex-1 flex flex-col items-center justify-center px-4 py-6">
-        <div className="w-full max-w-6xl bg-white shadow-lg rounded-lg p-6 space-y-6">
+      <main className="flex-1 flex flex-col items-center justify-center px-6 py-6">
+        <div className="w-full max-w-screen-lg bg-white shadow-lg rounded-lg p-6 space-y-6">
           <PlotDisplay data={plotData} />
           {!results ? (
             <GuessControls
@@ -30,9 +31,7 @@ const App = () => {
           )}
         </div>
       </main>
-      <footer className="bg-gray-200 text-center py-4 text-sm text-gray-600">
-        © 2025 Aberration Guesser. All rights reserved.
-      </footer>
+        <Footer />
     </div>
   );
 };
