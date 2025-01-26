@@ -15,8 +15,7 @@ Aberrations are generally depicted using one of these two types of plots, which 
 The wavefront aberration is described by the following formula, where the coefficients \( w \) determine the magnitude of each aberration:
 
 $$
-W(h, \rho_x, \rho_y) = w_d h^2 + w_t h \rho_y + w_1 \rho^4 + w_2 \rho^2 (h \rho_y)^2
-+ \left( \frac{1}{2} w_3 + w_4 \right) h^2 \rho^2 + w_5 h^3 \rho_y + O(6)
+W(h, \rho_x, \rho_y) = w_d h^2 + w_t h \rho_y + w_1 \rho^4 + w_2 \rho^2 (h \rho_y)^2+ \left( \frac{1}{2} w_3 + w_4 \right) h^2 \rho^2 + w_5 h^3 \rho_y + O(6)
 $$
 
 Where:
