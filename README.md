@@ -16,4 +16,7 @@ The wavefront aberration is described by the following formula, where the coeffi
 ```
 
 ### Transverse Ray Error Formula
-This is derived (though not exactly) from the wavefront aberration formula. The coefficients 𝜎 represent the magnitude of each aberration:
+This is derived (though not exactly) from the wavefront aberration formula. The coefficients \( 𝜎 \) represent the magnitude of each aberration:
+```math
+(Transverse Ray Error Formula Formula here)
+```
