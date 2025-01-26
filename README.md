@@ -26,13 +26,13 @@ $$
 
 The coefficients are defined as:
 
-- $ \( w_d \): Defocus $
-- $$ \( w_t \): Tilt (y) $$
-- $$ \( w_1 \): Spherical $$ 
-- $$ \( w_2 \): Coma $$ 
-- $$ \( w_3 \): Astigmatism $$ 
-- $$ \( w_4 \): Petzval $$ 
-- $$ \( w_5 \): Distortion $$ 
+$$ \( w_d \): Defocus $$
+$$ \( w_t \): Tilt (y) $$
+$$ \( w_1 \): Spherical $$ 
+$$ \( w_2 \): Coma $$ 
+$$ \( w_3 \): Astigmatism $$ 
+$$ \( w_4 \): Petzval $$ 
+$$ \( w_5 \): Distortion $$ 
 
 **Note:** Coefficient = Magnitude of the aberration.
 
