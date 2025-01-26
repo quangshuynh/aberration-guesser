@@ -2,13 +2,15 @@
 
 ## General Concept
 
-Aberration Guesser is a tool designed to "gamify" the process of identifying aberrations in optical systems. It helps reinforce the user's understanding of **wavefront aberration plots** and **transverse ray error plots**.
+Aberration Guesser is a tool designed to "gamify" the process of identifying aberrations in optical systems. It helps reinforce the user's understanding of **wavefront aberration plots** and **transverse ray error plots**. A plot displays one of nine possible aberrations, and the user must identify it by selecting the correct option from a list of checkboxes.
 
 Aberrations are generally depicted using one of these two types of plots, which are mathematically related:
 
 - A transverse ray error plot is a scaled derivative of the wavefront aberration plot.
 
 ---
+
+List of Aberrations: Defocus, tilt, Spherical, Coma, Astigmatism, Petzval, Distortion, Axial Color & Lateral Color
 
 ## Wavefront Aberration Formula
 
