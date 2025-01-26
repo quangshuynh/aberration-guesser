@@ -33,27 +33,19 @@ const getRandomValue = () => {
 
 
 export const generatePlotData = () => {
-  const selectedAberrations = ABERRATIONS.sort(() => 0.5 - Math.random()).slice(
-    0,
-    Math.floor(Math.random() * 3) + 2
-  );
-
-  const aberrationValues = selectedAberrations.reduce((acc, aberration) => {
-    acc[aberration] = getRandomValue(); 
+  const selectedAberration = ABERRATIONS[Math.floor(Math.random() * ABERRATIONS.length)];
+  
+  const aberrationValues = ABERRATIONS.reduce((acc, aberration) => {
+    acc[aberration] = aberration === selectedAberration ? getRandomValue() : 0;
     return acc;
   }, {});
-
-  ABERRATIONS.forEach((aberration) => {
-    if (!selectedAberrations.includes(aberration)) {
-      aberrationValues[aberration] = 0;
-    }
-  });
 
   return {
     type: Math.random() < 0.5 ? "Wavefront" : "Transverse",
     aberrations: aberrationValues,
   };
 };
+
 
 
 
