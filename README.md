@@ -11,7 +11,7 @@ Aberrations are generally depicted using one of these two types of plots, which 
 
 ---
 
-List of Aberrations: Defocus, tilt, Spherical, Coma, Astigmatism, Petzval, Distortion, Axial Color & Lateral Color
+List of Aberrations: Defocus, Tilt, Spherical, Coma, Astigmatism, Petzval, Distortion, Axial Color & Lateral Color
 
 ## Wavefront Aberration Formula
 
