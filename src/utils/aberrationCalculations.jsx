@@ -11,15 +11,15 @@ export const ABERRATIONS = [
 ];
 
 const aberrationEquations = {
-  defocus: (r, theta, coeff) => coeff * r ** 2,
-  tilt: (r, theta, coeff) => coeff * r * Math.cos(theta),
-  spherical: (r, theta, coeff) => coeff * r ** 4,
-  coma: (r, theta, coeff) => coeff * r ** 3 * Math.cos(theta),
-  astigmatism: (r, theta, coeff) => coeff * r ** 2 * Math.cos(2 * theta),
-  petzval: (r, theta, coeff) => coeff * r ** 2,
-  distortion: (r, theta, coeff) => coeff * r ** 3,
-  axialColor: (r, theta, coeff) => coeff * r / (1 + r),
-  lateralColor: (r, theta, coeff) => coeff * r * Math.sin(theta),
+  defocus: (r, theta, coeff, h) => coeff * r ** 2,
+  tilt: (r, theta, coeff, h) => coeff * r * Math.cos(theta) * h,  // siedel 3
+  spherical: (r, theta, coeff, h) => coeff * r ** 4,  // siedel 5
+  coma: (r, theta, coeff,h ) => coeff * r ** 3 * Math.cos(theta) * h,  // siedel 6
+  astigmatism: (r, theta, coeff, h) => coeff * r ** 2 * Math.cos(2 * theta) * (h ** 2),  // siedel 7
+  petzval: (r, theta, coeff, h) => coeff * r ** 2 * (h ** 2),  // siedel 8
+  distortion: (r, theta, coeff, h) => coeff * r ** 3 * (h ** 3),  // siedel 9
+  axialColor: (r, theta, coeff, h) => coeff * r / (1 + r),
+  lateralColor: (r, theta, coeff, h) => coeff * r * Math.sin(theta),
 };
 
 
@@ -34,7 +34,6 @@ const getRandomValue = () => {
 
 export const generatePlotData = () => {
   const selectedAberration = ABERRATIONS[Math.floor(Math.random() * ABERRATIONS.length)];
-  
   const aberrationValues = ABERRATIONS.reduce((acc, aberration) => {
     acc[aberration] = aberration === selectedAberration ? getRandomValue() : 0;
     return acc;
@@ -45,8 +44,6 @@ export const generatePlotData = () => {
     aberrations: aberrationValues,
   };
 };
-
-
 
 
 export const calculatePlotPoints = (type, aberrations) => {
