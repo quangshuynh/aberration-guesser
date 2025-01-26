@@ -26,8 +26,8 @@ $$
 
 The coefficients are defined as:
 
-$$ \( w_d \): Defocus $$
-$$ \( w_t \): Tilt (y) $$
+$$ \( w_d \) $$: Defocus 
+$$ \( w_t \)$$: Tilt (y) 
 $$ \( w_1 \): Spherical $$ 
 $$ \( w_2 \): Coma $$ 
 $$ \( w_3 \): Astigmatism $$ 
