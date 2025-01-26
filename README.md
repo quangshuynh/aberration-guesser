@@ -26,13 +26,13 @@ $$
 
 The coefficients are defined as:
 
-- \( w_d \): Defocus
-- \( w_t \): Tilt (y)
-- \( w_1 \): Spherical
-- \( w_2 \): Coma
-- \( w_3 \): Astigmatism
-- \( w_4 \): Petzval
-- \( w_5 \): Distortion
+- $$ \( w_d \): Defocus $$
+- $$ \( w_t \): Tilt (y) $$
+- $$ \( w_1 \): Spherical $$ 
+- $$ \( w_2 \): Coma $$ 
+- $$ \( w_3 \): Astigmatism $$ 
+- $$ \( w_4 \): Petzval $$ 
+- $$ \( w_5 \): Distortion $$ 
 
 **Note:** Coefficient = Magnitude of the aberration.
 
@@ -45,21 +45,19 @@ This is derived (though not exactly) from the wavefront aberration formula. The 
 For the transverse ray aberration in \( y \):
 
 $$
-\varepsilon_y = \sigma_1 \rho^3 \cos \theta + \sigma_2 \rho^2 h (2 + \cos 2\theta)
-+ (\sigma_3 + \sigma_4) h^2 \rho \cos \theta + \sigma_5 h^3 + O(5)
+\varepsilon_y = \sigma_1 \rho^3 \cos \theta + \sigma_2 \rho^2 h (2 + \cos 2\theta)+ (\sigma_3 + \sigma_4) h^2 \rho \cos \theta + \sigma_5 h^3 + O(5)
 $$
 
 For the transverse ray aberration in \( x \):
 
 $$
-\varepsilon_x = \sigma_1 \rho^3 \sin \theta + \sigma_2 \rho^2 h \sin 2\theta
-+ (\sigma_3 + \sigma_4) h^2 \rho \sin \theta + O(5)
+\varepsilon_x = \sigma_1 \rho^3 \sin \theta + \sigma_2 \rho^2 h \sin 2\theta+ (\sigma_3 + \sigma_4) h^2 \rho \sin \theta + O(5)
 $$
 
 Where the coefficients are:
 
-- \( \sigma_1 \): Spherical
-- \( \sigma_2 \): Coma
-- \( \sigma_3 \): Astigmatism
-- \( \sigma_4 \): Petzval
-- \( \sigma_5 \): Distortion
+- $$ \( \sigma_1 \): Spherical $$ 
+- $$ \( \sigma_2 \): Coma $$ 
+- $$ \( \sigma_3 \): Astigmatism $$ 
+- $$ \( \sigma_4 \): Petzval $$ 
+- $$ \( \sigma_5 \): Distortion $$ 
