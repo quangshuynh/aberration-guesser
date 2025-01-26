@@ -63,3 +63,5 @@ $$ \( \sigma_2 \):  Coma $$
 $$ \( \sigma_3 \):  Astigmatism $$ 
 $$ \( \sigma_4 \):  Petzval $$ 
 $$ \( \sigma_5 \):  Distortion $$ 
+
+![image](https://github.com/user-attachments/assets/8b736156-cc98-41dc-aa64-3c1af85dff70)
