@@ -12,12 +12,12 @@ export const ABERRATIONS = [
 
 const aberrationEquations = {
   defocus: (r, theta, coeff, h) => coeff * r ** 2,
-  tilt: (r, theta, coeff, h) => coeff * r * Math.cos(theta) * h,  // siedel 3
+  tilt: (r, theta, coeff, h) => coeff * h * r * sin(theta),
   spherical: (r, theta, coeff, h) => coeff * r ** 4,  // siedel 5
-  coma: (r, theta, coeff,h ) => coeff * r ** 3 * Math.cos(theta) * h,  // siedel 6
-  astigmatism: (r, theta, coeff, h) => coeff * r ** 2 * Math.cos(2 * theta) * (h ** 2),  // siedel 7
-  petzval: (r, theta, coeff, h) => coeff * r ** 2 * (h ** 2),  // siedel 8
-  distortion: (r, theta, coeff, h) => coeff * r ** 3 * (h ** 3),  // siedel 9
+  coma: (r, theta, coeff, h) => coeff * r ^ 3 * h * sin(theta),  // siedel 6
+  astigmatism: (r, theta, coeff, h) => coeff * h * r * sin(theta),  // siedel 7
+  petzval: (r, theta, coeff, h, astigcoeff) => (0.5 * astigcoeff + coeff) * (h ** 2) * (r ** 2),  // siedel 8
+  distortion: (r, theta, coeff, h) => coeff * h ** 3 * r * sin(theta),  // siedel 9
   axialColor: (r, theta, coeff, h) => coeff * r / (1 + r),
   lateralColor: (r, theta, coeff, h) => coeff * r * Math.sin(theta),
 };
