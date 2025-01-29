@@ -12,7 +12,7 @@ const PlotDisplay = ({ data }) => {
           data={Object.entries(data.aberrations)
             .filter(([_, value]) => value !== 0)
             .map(([aberration, value], index) => ({
-              x: Array.from({ length: 100 }, (_, i) => i / 10),
+              x: Array.from({ length: 100 }, (_, i) => -1 + (2 * i) / 99),
               y: Array.from({ length: 100 }, (_, i) => Math.sin(value * (i / 10))),
               type: "scatter",
               mode: "lines",
@@ -21,12 +21,12 @@ const PlotDisplay = ({ data }) => {
           layout={{
             title: "",
             xaxis: {
-              title: "X-axis (Sagittal)",
+              title: "Relative Pupil Coordinate",
               titlefont: { color: "#d8dee9" },
               tickfont: { color: "#d8dee9" },
             },
             yaxis: {
-              title: "Y-axis (Tangential)",
+              title: "Error", // Needs different names for each case of wavefront vs transverse ray error
               titlefont: { color: "#d8dee9" },
               tickfont: { color: "#d8dee9" },
             },
