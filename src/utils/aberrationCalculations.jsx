@@ -56,15 +56,17 @@ export const calculatePlotPoints = (type, aberrations) => {
           const y = (j - gridSize / 2) / (gridSize / 2);
           const r = Math.sqrt(x ** 2 + y ** 2); 
           const theta = Math.atan2(y, x); 
+          const h = 1; // unsure how to implement different h values without duplicating this entire section... temporary test
           if(r <= 1) {
             let value;
             if(type === "Wavefront") {
-              value = aberrationEquations[aberration](r, theta, coeff) || 0;
+              value = aberrationEquations[aberration](r, theta, coeff, h) || 0;
             } else if (type === "Transverse") {
-              const wavefront = aberrationEquations[aberration](r, theta, coeff) || 0;
-              const dW_dr = (wavefront - aberrationEquations[aberration](r - 0.01, theta, coeff)) / 0.01;
-              const dW_dtheta = (wavefront - aberrationEquations[aberration](r, theta - 0.01, coeff)) / (0.01 * r);
-              value = Math.sqrt(dW_dr ** 2 + dW_dtheta ** 2); 
+              const wavefront = aberrationEquations[aberration](r, theta, coeff, h) || 0;
+              const dW_dr = (wavefront - aberrationEquations[aberration](r - 0.01, theta, coeff, h)) / 0.01;
+              // const dW_dtheta = (wavefront - aberrationEquations[aberration](r, theta - 0.01, coeff)) / (0.01 * r);
+              // value = Math.sqrt(dW_dr ** 2 + dW_dtheta ** 2); 
+              value = dW_dr;
             }
             points.push({ x, y, z: value });
           }
